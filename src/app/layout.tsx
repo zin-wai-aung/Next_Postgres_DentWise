@@ -4,11 +4,6 @@ import "./globals.css";
 
 import {
   ClerkProvider,
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
 } from "@clerk/nextjs";
 
 const geistSans = Geist({
@@ -36,7 +31,7 @@ export default function RootLayout({
 
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased dark`}
       >
         {children}
       </body>
