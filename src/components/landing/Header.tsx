@@ -13,32 +13,45 @@ function Header() {
             alt="DentWise Logo"
             width={32}
             height={32}
-             className="w-11"
+            className="w-11"
           />
           <span className="font-semibold text-lg">DentWise</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
-          <Link href="#" className="text-muted-foreground hover:text-foreground">
+          <Link
+            href="#"
+            className="text-muted-foreground hover:text-foreground"
+          >
             How it Works
           </Link>
-          <Link href="#" className="text-muted-foreground hover:text-foreground">
+          <Link
+            href="#"
+            className="text-muted-foreground hover:text-foreground"
+          >
             Pricing
           </Link>
-          <Link href="#" className="text-muted-foreground hover:text-foreground">
+          <Link
+            href="#"
+            className="text-muted-foreground hover:text-foreground"
+          >
             About
           </Link>
         </div>
 
         <div className="flex items-center gap-3">
-          <SignInButton mode="modal">
-            <Button variant={"ghost"} className="text-muted-foreground" size={"sm"}>
-              Login
-            </Button>
-          </SignInButton>
-          <SignUpButton mode="modal">
-            <Button size={"sm"}>Sign Up</Button>
-          </SignUpButton>
+            <SignInButton mode="modal">
+              <Button
+                variant={"ghost"}
+                className="text-muted-foreground"
+                size={"sm"}
+              >
+                Login
+              </Button>
+            </SignInButton>
+            <SignUpButton mode="modal">
+              <Button size={"sm"}>Sign Up</Button>
+            </SignUpButton>
         </div>
       </div>
     </nav>
