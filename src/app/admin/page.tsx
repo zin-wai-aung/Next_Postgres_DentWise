@@ -3,8 +3,6 @@ import { redirect } from "next/navigation";
 
 async function AdminPage() {
      const user = await currentUser();
-
-     console.log('hello user',user)
      //user is not login
      if (!user) redirect("/")
      

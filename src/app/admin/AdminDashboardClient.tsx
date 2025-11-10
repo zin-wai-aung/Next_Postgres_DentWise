@@ -13,8 +13,6 @@ function AdminDashboardClient() {
   const { data:doctors=[],isLoading:doctorsLoading} = useGetDoctors();
   const { data:appointments=[],isLoading:appointmentsLoading} = useGetAppointments();
 
-  // console.log(doctors,appointments)
-
   const stats = {
     totalDoctors: doctors.length,
     activeDoctors:doctors.filter((doctor)=>doctor.isActive).length,
