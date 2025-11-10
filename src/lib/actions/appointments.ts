@@ -134,7 +134,7 @@ export async function getUserAppointmentStats() {
   }
 }
 
-export async function getBookedTimeSlots(doctorId: string, date: string) {
+export async function getBookedTimeSlots(doctorId: string, date: string) { 
   try {
     const appointments = await prisma.appointment.findMany({
       where: {

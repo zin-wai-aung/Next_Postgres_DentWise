@@ -1,7 +1,7 @@
 "use client";
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { bookAppointment, getAppointments, getBookedTimeSlots, getUserAppointmentStats, updateAppointmentStatus } from "../lib/actions/appointments";
+import { bookAppointment, getAppointments, getBookedTimeSlots, getUserAppointments, updateAppointmentStatus } from "../lib/actions/appointments";
 
 export function useGetAppointments() {
   const result = useQuery({
@@ -36,7 +36,7 @@ export function useBookAppointment() {
 export function useUserAppointments() {
   const result = useQuery({
     queryKey: ["getUserAppointments"],
-    queryFn: getUserAppointmentStats,
+    queryFn: getUserAppointments,
   });
 
   return result;
@@ -53,3 +53,4 @@ export function useUpdateAppointmentStatus() {
     onError: (error) => console.error("Failed to update appointment:", error),
   });
 }
+
