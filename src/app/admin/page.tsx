@@ -1,5 +1,6 @@
 import { currentUser } from "@clerk/nextjs/server"
 import { redirect } from "next/navigation";
+import AdminDashboardClient from "./AdminDashboardClient";
 
 async function AdminPage() {
      const user = await currentUser();
@@ -11,9 +12,8 @@ async function AdminPage() {
 
      //user is not admin
      if(!adminEmail || userEmail !== adminEmail) redirect("/dashboard")
-  return (
-    <div>You are the Admin</div>
-  )
+    return <AdminDashboardClient />;
+
 }
 
 export default AdminPage
